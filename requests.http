@@ -1,0 +1,183 @@
+@baseUrl = https://bookish-potato-6qw7vggv9pjfrx4w-3000.app.github.dev
+@contentType = application/json
+
+### ==========================================
+### API BLOGGING PLATFORM
+### ==========================================
+
+### Teste da API
+GET {{baseUrl}}/
+
+###
+
+### Listar todos os posts
+GET {{baseUrl}}/posts
+
+###
+
+### Buscar post por ID
+GET {{baseUrl}}/posts/3
+
+###
+
+### Criar um novo post
+POST {{baseUrl}}/posts
+Content-Type: {{contentType}}
+
+{
+    "title": "Aprendendo REST Client",
+    "content": "Este post foi criado utilizando o REST Client do VS Code.",
+    "category": "Programação",
+    "tags": [
+        "node",
+        "express",
+        "prisma"
+    ]
+}
+
+###
+
+### Atualizar um post
+PUT {{baseUrl}}/posts/1
+Content-Type: {{contentType}}
+
+{
+    "title": "Post Atualizado",
+    "content": "Conteúdo atualizado utilizando REST Client.",
+    "category": "Backend",
+    "tags": [
+        "express",
+        "node",
+        "prisma",
+        "rest-client"
+    ]
+}
+
+###
+
+### Deletar um post
+DELETE {{baseUrl}}/posts/1
+
+###
+
+### Criar vários posts para testes
+
+POST {{baseUrl}}/posts
+Content-Type: {{contentType}}
+
+{
+    "title": "Node.js",
+    "content": "Aprendendo Node.",
+    "category": "Backend",
+    "tags": [
+        "node"
+    ]
+}
+
+###
+
+POST {{baseUrl}}/posts
+Content-Type: {{contentType}}
+
+{
+    "title": "Express",
+    "content": "Aprendendo Express.",
+    "category": "Backend",
+    "tags": [
+        "express"
+    ]
+}
+
+###
+
+POST {{baseUrl}}/posts
+Content-Type: {{contentType}}
+
+{
+    "title": "Prisma ORM",
+    "content": "Aprendendo Prisma.",
+    "category": "Banco de Dados",
+    "tags": [
+        "prisma",
+        "postgres"
+    ]
+}
+
+###
+
+### Confirmar todos os registros
+
+GET {{baseUrl}}/posts
+
+###
+
+### Buscar um post inexistente
+
+GET {{baseUrl}}/posts/999
+
+###
+
+### Atualizar um post inexistente
+
+PUT {{baseUrl}}/posts/999
+Content-Type: {{contentType}}
+
+{
+    "title": "Teste",
+    "content": "Teste",
+    "category": "Teste",
+    "tags": [
+        "teste"
+    ]
+}
+
+###
+
+### Deletar um post inexistente
+
+DELETE {{baseUrl}}/posts/999
+
+###
+
+### Criar post inválido (sem título)
+
+POST {{baseUrl}}/posts
+Content-Type: {{contentType}}
+
+{
+    "content": "Sem título",
+    "category": "Teste",
+    "tags": [
+        "erro"
+    ]
+}
+
+###
+
+### Criar post inválido (sem conteúdo)
+
+POST {{baseUrl}}/posts
+Content-Type: {{contentType}}
+
+{
+    "title": "Sem conteúdo",
+    "category": "Teste",
+    "tags": [
+        "erro"
+    ]
+}
+
+###
+
+### Criar post inválido (sem categoria)
+
+POST {{baseUrl}}/posts
+Content-Type: {{contentType}}
+
+{
+    "title": "Sem categoria",
+    "content": "Teste",
+    "tags": [
+        "erro"
+    ]
+}
