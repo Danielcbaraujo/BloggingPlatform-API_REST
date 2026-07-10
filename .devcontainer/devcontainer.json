@@ -1,0 +1,13 @@
+{
+  "name": "BloggingPlatform-API_REST",
+
+  "forwardPorts": [3000],
+
+  "portsAttributes": {
+    "3000": {
+      "label": "API REST",
+      "visibility": "public",
+      "onAutoForward": "notify"
+    }
+  }
+}

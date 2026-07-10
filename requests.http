@@ -38,7 +38,7 @@ Content-Type: {{contentType}}
 ###
 
 ### Atualizar um post
-PUT {{baseUrl}}/posts/1
+PUT {{baseUrl}}/posts/6
 Content-Type: {{contentType}}
 
 {
